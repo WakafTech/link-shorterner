@@ -1,11 +1,5 @@
-import { Supabase } from "../external-api/supabase";
+import { Db } from "../external-api/supabase/db";
 
 export const fetchDestination = async (path: string) => {
-    const { data, error } = await Supabase.getDestination(path)
-
-    if (!data?.destination || error) {
-        return null
-    }
-
-    return data.destination;
+    return await Db.getDestination(path)
 }
