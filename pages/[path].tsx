@@ -1,10 +1,10 @@
 import { NextApiRequest, NextPage } from "next";
 import Head from "next/head";
-import { fetchDestinationUrl } from "../services/fetch-destination-url";
+import { fetchDestination } from "../services/fetch-destination";
 
 export async function getServerSideProps(request: NextApiRequest) {
     const shortPath = request.query.path as string;
-    const destination = await fetchDestinationUrl(shortPath)
+    const destination = await fetchDestination(shortPath)
   
     if (destination) {
       return {
