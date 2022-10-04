@@ -34,7 +34,7 @@ export const Navbar = () => {
                 Request Access
               </Button>
               <Link
-                href={`https://mmo.sg/login?redirectTo=${clientConfig.app.baseUrl}`}
+                href={`https://auth.mmo.sg/login?redirectTo=${clientConfig.app.baseUrl}`}
               >
                 <Button colorScheme="teal" fontSize={{ base: "sm", sm: "md" }}>
                   Sign In

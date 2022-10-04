@@ -39,7 +39,7 @@ export const Hero = () => {
           alignSelf={"center"}
         >
           <Link
-            href={`https://mmo.sg/login?redirectTo=${clientConfig.app.baseUrl}`}
+            href={`https://auth.mmo.sg/login?redirectTo=${clientConfig.app.baseUrl}`}
           >
             <Button colorScheme="teal" size="lg" px={12} fontWeight="bold">
               Sign In
