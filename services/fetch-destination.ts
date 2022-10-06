@@ -1,5 +1,9 @@
 import { Db } from "../external-api/supabase/db";
 
 export const fetchDestination = async (path: string) => {
-    return await Db.getDestination(path)
+    const {body} = await Db.getSingleShortLink(path)
+    if (body) {
+        return body.destination
+    }
+    return null
 }
